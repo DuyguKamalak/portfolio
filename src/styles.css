@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background: #80a980; /* Koyu zümrüt yeşili */
+  color: #E9ECE9; /* Açık gri-yeşil */
+  overflow-x: hidden;
+}
+
+/* Ahşap doku arka planı */
+.wood-texture {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Kelebek canvas stili */
+.butterflies-canvas {
+  background: linear-gradient(to bottom, rgba(74, 110, 74, 0.8), rgba(28, 37, 28, 0.6)); /* Hafif şeffaf gradyan */
+  pointer-events: none; /* Canvas'ın altında tıklanabilir öğelere izin verir */
+}
+
+/* Başlık stili */
+.forest-title {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  color: #A38C56; /* Mat altın */
+  animation: fadeInSlideUp 1s ease-out;
+}
+
+@keyframes fadeInSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Menü öğeleri */
+.leaf-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.leaf-link {
+  text-decoration: none;
+  color: #E9ECE9;
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: #283328; /* Koyu gri-yeşil */
+  transition: all 0.3s ease;
+}
+
+.leaf-link:hover {
+  background: #3C4F3C; /* Yumuşak orman yeşili */
+  color: #A38C56;
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Form stili */
+.form-input,
+.form-textarea {
+  background: #283328;
+  border: 1px solid #5A6B5A;
+  color: #E9ECE9;
+  padding: 0.8rem;
+  border-radius: 6px;
+  width: 100%;
+  font-family: 'Lora', serif;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #A38C56;
+  outline: none;
+}
+
+/* Buton stili */
+.form-button {
+  background: #3C4F3C;
+  color: #E9ECE9;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  background: #A38C56;
+  transform: scale(1.05);
+}
+
+.form-button:active {
+  transform: scale(0.95);
+}
+
+/* Kartlar */
+.magic-card {
+  background: #283328;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #5A6B5A;
+  height: 340px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10; /* Kelebeklerin üstünde görünmesi için */
+}
+
+.magic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(163, 140, 86, 0.3);
+}
+
+.magic-card h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: #A38C56;
+  margin-bottom: 0.5rem;
+}
+
+.magic-card p {
+  font-size: 1rem;
+  color: #E9ECE9;
+  flex-grow: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.magic-card:hover p {
+  opacity: 1;
+}
+
+.magic-card button {
+  background: #3C4F3C;
+  color: #E9ECE9;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-end;
+}
+
+.magic-card button:hover {
+  background: #A38C56;
+  transform: scale(1.05);
+}
+
+.magic-card button:active {
+  transform: scale(0.95);
+}
+
+/* Genel butonlar */
+button:not(.form-button) {
+  background: #3C4F3C;
+  color: #E9ECE9;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover:not(.form-button) {
+  background: #A38C56;
+  transform: scale(1.05);
+}
+
+button:active:not(.form-button) {
+  transform: scale(0.95);
+}
+
+/* Duyarlı tasarım */
+@media (max-width: 768px) {
+  .forest-title {
+    font-size: 2.2rem;
+  }
+
+  .leaf-links {
+    flex-direction: column;
+    gap: 1rem;
+    bottom: 5%;
+  }
+
+  .leaf-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .magic-card {
+    height: 360px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Özel font ve renk tanımları */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/public/fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Leaf link stilleri */
+.leaf-link {
+  color: #F5E6CC; /* text-cream */
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.leaf-link:hover {
+  color: #A38C56; /* text-golden */
+}
+
+/* Mobil cihazlar için sidebar düzenlemeleri */
+@media (max-width: 767px) {
+  .leaf-links {
+    display: none; /* Mobil cihazlarda desktop linklerini tamamen gizle */
+  }
+}
