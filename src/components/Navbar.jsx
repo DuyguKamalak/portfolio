@@ -31,7 +31,7 @@ const Navbar = ({ language = 'tr', setLanguage }) => {
 
   return (
     <>
-   <nav className="fixed top-0 left-0 w-full bg-gradient-to-b from-light-green to-forest-green bg-opacity-90 backdrop-blur-md z-50 border-b border-emerald">
+   <nav className="fixed top-0 left-0 w-full bg-gradient-to-b from-light-green to-forest-green  backdrop-blur-2xl z-50 border-b border-emerald">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo (Mobil modda DK metni, Desktop modda fotoğraf) */}

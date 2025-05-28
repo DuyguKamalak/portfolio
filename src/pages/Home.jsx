@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';console.log
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -20,8 +20,8 @@ const Home = ({ language }) => {
           animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.8 } }}
         >
           {language === 'en'
-            ? 'I’m Duygu, a computer engineering student passionate about creating innovative solutions. Welcome to My Portfolio'
-            : 'Ben Duygu, yenilikçi çözümler üretmeye tutkulu bir bilgisayar mühendisiyim. Portföyüme Hoş Geldiniz'}
+            ? 'I’m Duygu, a computer engineering student passionate about creating innovative solutions. Welcome to My Portfolio!'
+            : 'Ben Duygu, yenilikçi çözümler üretmeye tutkulu bir bilgisayar mühendisiyim. Portföyüme Hoş Geldiniz!'}
         </motion.p>
         <Link to="/projects">
           <motion.button

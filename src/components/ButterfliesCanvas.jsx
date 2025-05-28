@@ -23,7 +23,7 @@ const ButterfliesCanvas = () => {
 
     // Kelebekler dizisi
     const butterflies = [];
-    const butterflyCount = 500; // 500 kelebek yükleyeceğiz
+    const butterflyCount = 300; // 300 kelebek yükleyeceğiz
     const loader = new GLTFLoader();
 
     // Kelebekleri yükle
@@ -42,15 +42,13 @@ const ButterfliesCanvas = () => {
           butterflies.push(butterfly);
         },
         (progress) => {
-          console.log(`Kelebek ${i + 1} yükleniyor: ${(progress.loaded / progress.total) * 100}%`);
         },
         (error) => {
-          console.error(`Kelebek ${i + 1} yüklenirken hata:`, error);
         }
       );
     }
 
-    camera.position.z = 20; // Kamerayı biraz daha yakınlaştır
+    camera.position.z = 10; // Kamerayı biraz daha yakınlaştır
 
     // Animasyon döngüsü
     const animate = () => {

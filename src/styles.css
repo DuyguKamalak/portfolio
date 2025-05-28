@@ -224,7 +224,7 @@ button:active:not(.form-button) {
 /* Özel font ve renk tanımları */
 @font-face {
   font-family: 'Cinzel';
-  src: url('/public/fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  src: url('/fonts/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -246,4 +246,37 @@ button:active:not(.form-button) {
   .leaf-links {
     display: none; /* Mobil cihazlarda desktop linklerini tamamen gizle */
   }
+}
+
+/* Proje kartları grid yapısı */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Kart içindeki SVG görsel */
+.magic-card .project-icon {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.magic-card {
+  min-height: 420px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.magic-card .form-button {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 200px;
+  align-self: center;
 }

@@ -19,8 +19,8 @@ const About = ({ language }) => {
           animate={{ opacity: 1, transition: { delay: 0.5, duration: 0.8 } }}
         >
           {language === 'en'
-            ? 'I’m Duygu Kamalak, a computer engineering student at Manisa Celal Bayar University (2020-2025). Based in Bornova, İzmir, I’m passionate about software development, embedded systems, and innovative technologies.'
-            : 'Ben Duygu Kamalak, Manisa Celal Bayar Üniversitesi’nde bilgisayar mühendisliği öğrencisiyim (2020-2025). Bornova, İzmir’de yaşıyorum ve yazılım geliştirme, gömülü sistemler ve yenilikçi teknolojilere tutkuluyum.'}
+            ? 'I’m Duygu Kamalak, a computer engineering student at Manisa Celal Bayar University (2020-2025). Based in Bornova, İzmir, I’m passionate about software development and innovative technologies.'
+            : 'Ben Duygu Kamalak, Manisa Celal Bayar Üniversitesi’nde bilgisayar mühendisliği öğrencisiyim (2020-2025). Bornova, İzmir’de yaşıyorum ve yazılım geliştirme ve yenilikçi teknolojilere tutkuluyum.'}
         </motion.p>
         <motion.p
           className="text-lg text-forest-green"
@@ -28,8 +28,8 @@ const About = ({ language }) => {
           animate={{ opacity: 1, transition: { delay: 0.7, duration: 0.8 } }}
         >
           {language === 'en'
-            ? 'During my internship at Kahramanmaraş Valiliği (Aug 2023), I researched new technologies, worked on embedded systems, and learned new programming languages. I also coordinated promotions for OTGET (Community of Game Designers and Developers) and participated in a social responsibility project delivering food to those in need in Manisa.'
-            : 'Kahramanmaraş Valiliği’nde stajım sırasında (Ağustos 2023), yeni teknolojileri araştırdım, gömülü sistemler üzerine çalıştım ve yeni programlama dilleri öğrendim. Ayrıca OTGET (Oyun Tasarımcıları ve Geliştiricileri Topluluğu) için tanıtım koordinatörlüğü yaptım ve Manisa’da ihtiyaç sahiplerine yemek ulaştıran bir sosyal sorumluluk projesine katıldım.'}
+            ? 'During my undergraduate studies, I took both theoretical and practical courses in areas such as algorithms, data structures, database management, artificial intelligence, computer networks, and software engineering. Throughout this period, I gained hands-on experience with the Scrum-based Agile software development methodology, including sprint planning, daily meetings, task tracking, and iterative development processes. Additionally, I developed a mobile application using Flutter to enable ride-sharing among university students, gaining valuable experience in software development and user experience.During my internship at Kahramanmaraş Valiliği (Aug 2023), I researched new technologies,and learned new programming languages. I also coordinated promotions for OTGET (Community of Game Designers and Developers) and participated in a social responsibility project delivering food to those in need in Manisa.'
+            : 'Lisans eğitimim süresince algoritmalar, veri yapıları, veritabanı yönetimi, yapay zekâ, bilgisayar ağları ve yazılım mühendisliği gibi çeşitli alanlarda hem teorik hem de uygulamalı dersler aldım. Bu süreçte, Scrum tabanlı Agile yazılım geliştirme metodolojisiyle çalışma fırsatı buldum; sprint planlaması, günlük toplantılar, görev takibi ve iteratif geliştirme süreçlerini aktif olarak deneyimledim. Ayrıca, Flutter kullanarak üniversite öğrencileri arasında yolculuk paylaşımı sağlamak amacıyla bir mobil uygulama geliştirdim, böylece hem yazılım geliştirme hem de kullanıcı deneyimi alanlarında önemli bir pratik kazandım.Kahramanmaraş Valiliği’nde stajım sırasında (Ağustos 2023), yeni teknolojileri araştırdım ve yeni programlama dilleri öğrendim. Ayrıca OTGET (Oyun Tasarımcıları ve Geliştiricileri Topluluğu) için tanıtım koordinatörlüğü yaptım ve Manisa’da ihtiyaç sahiplerine yemek ulaştıran bir sosyal sorumluluk projesine katıldım.'}
         </motion.p>
         <motion.div
           className="text-lg text-forest-green"
@@ -38,9 +38,9 @@ const About = ({ language }) => {
         >
           <h2 className="text-2xl font-cinzel text-golden mb-2">{language === 'en' ? 'Skills' : 'Beceriler'}</h2>
           <ul className="list-disc list-inside">
-            <li>{language === 'en' ? 'Programming: Java, Python, HTML/CSS, SQL, OpenGL' : 'Programlama: Java, Python, HTML/CSS, SQL, OpenGL'}</li>
-            <li>{language === 'en' ? 'Tools: MS Office (Word, Excel), Cisco Packet Tracer' : 'Araçlar: MS Office (Word, Excel), Cisco Packet Tracer'}</li>
-            <li>{language === 'en' ? 'Soft Skills: Time Management, Critical Thinking, Communication, Leadership, Teamwork' : 'Yumuşak Beceriler: Zaman Yönetimi, Eleştirel Düşünme, İletişim, Liderlik, Takım Çalışması'}</li>
+            <li>{language === 'en' ? 'Programming: Java, Python, HTML/CSS, JavaScript, SQL, OpenGL' : 'Programlama: Java, Python, HTML/CSS, JavaScript, SQL, OpenGL'}</li>
+            <li>{language === 'en' ? 'Tools: Figma, Cisco Packet Tracer' : 'Araçlar: Figma, Cisco Packet Tracer'}</li>
+            <li>{language === 'en' ? 'Skills: Time Management, Critical Thinking, Communication, Leadership, Teamwork' : 'Beceriler: Zaman Yönetimi, Eleştirel Düşünme, İletişim, Liderlik, Takım Çalışması'}</li>
           </ul>
         </motion.div>
       </div>
